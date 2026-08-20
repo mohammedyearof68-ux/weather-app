@@ -9,7 +9,7 @@ const state=document.getElementById("state").value
     const country=document.getElementById("country").value
 
 
-const geocoding=`http://api.openweathermap.org/geo/1.0/direct?q=${state},${country}&limit=1&appid=a75f8dd2a4bdb1c4f780bb1d1092d6a8`
+const geocoding=`https://api.openweathermap.org/geo/1.0/direct?q=${state},${country}&limit=1&appid=a75f8dd2a4bdb1c4f780bb1d1092d6a8`
 
 
     
