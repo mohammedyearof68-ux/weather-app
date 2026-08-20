@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="weather.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- LEFT SIDE -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                <span>☁</span>
+                Weatherly
+            </div>
+
+            <div class="search-area">
+
+                <p class="label">SEARCH LOCATION</p>
+
+                <div class="input">
+                    <span>🌍</span>
+                    <input
+                        type="text"
+                        id="country"
+                        placeholder="Country"
+                    >
+                </div>
+
+                <div class="input">
+                    <span>📍</span>
+                    <input
+                        type="text"
+                        id="state"
+                        placeholder="State / Region"
+                    >
+                </div>
+
+                <button id="search-btn" onclick="search()">
+                    Search Location
+                </button>
+
+            </div>
+
+            <div class="sidebar-bottom">
+                <p>Weather data</p>
+                <span>Updated automatically</span>
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="main">
+
+            <!-- TOP -->
+            <header class="topbar">
+
+                <div>
+                    <p class="today">TODAY'S WEATHER</p>
+
+                    <h1 id="location-name">
+                        
+                    </h1>
+
+                    <p id="weather-description">
+                        
+                    </p>
+                </div>
+
+                <div class="date">
+                    <strong>Thursday</strong>
+                    <span>August 20, 2026</span>
+                </div>
+
+            </header>
+
+
+            <!-- MAIN WEATHER -->
+            <section class="hero">
+
+                <div class="hero-left">
+
+                    <div class="weather-symbol">
+                        ☀️
+                    </div>
+
+                    <div class="temperature">
+                        <span id="temperature"></span>
+                        <small>°C</small>
+                    </div>
+
+                    <p class="feels">
+                        Feels like
+                        <strong id="feels-like"></strong>
+                    </p>
+
+                </div>
+
+
+                <div class="hero-right">
+
+                    <div class="condition">
+                        <span>☀️</span>
+                        <div>
+                            <strong id="condition">
+                                
+                            </strong>
+                            <p>Clear skies with some clouds</p>
+                        </div>
+                    </div>
+
+                    <div class="sun-info">
+
+                        <div>
+                            <span>🌅</span>
+                            <p>Sunrise</p>
+                            <strong id="sunrise">6:12 AM</strong>
+                        </div>
+
+                        <div>
+                            <span>🌇</span>
+                            <p>Sunset</p>
+                            <strong id="sunset">6:34 PM</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- DETAILS -->
+            <section>
+
+                <div class="section-heading">
+                    <h2>Today's details</h2>
+                    <span>Live conditions</span>
+                </div>
+
+                <div class="details">
+
+                    <div class="detail humidity">
+                        <div class="detail-icon">💧</div>
+                        <p>Humidity</p>
+                        <strong id="humidity">%</strong>
+                        <span>Normal</span>
+                    </div>
+
+                    <div class="detail wind">
+                        <div class="detail-icon">💨</div>
+                        <p>Wind speed</p>
+                        <strong id="wind"> km/h</strong>
+                        <span>Moderate</span>
+                    </div>
+
+                    <div class="detail pressure">
+                        <div class="detail-icon">🌡️</div>
+                        <p>Pressure</p>
+                        <strong id="pressure"> hPa</strong>
+                        <span>Normal</span>
+                    </div>
+
+                    <div class="detail visibility">
+                        <div class="detail-icon">👁️</div>
+                        <p>Visibility</p>
+                        <strong id="visibility"> km</strong>
+                        <span>Good</span>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- FORECAST -->
+            <section class="forecast-section">
+
+                <div class="section-heading">
+                    <h2>5 day forecast</h2>
+                </div>
+
+                <div class="forecast">
+
+                    <div class="forecast-card active">
+                        <p>Today</p>
+                        <span>☀️</span>
+                        <strong id="today">28°</strong>
+                        <small id="today2">22°</small>
+                    </div>
+
+                    <div class="forecast-card">
+                        <p>Thu</p>
+                        <span>🌤️</span>
+                        <strong>29°</strong>
+                        <small>23°</small>
+                    </div>
+
+                    <div class="forecast-card">
+                        <p>Fri</p>
+                        <span>🌧️</span>
+                        <strong>27°</strong>
+                        <small>22°</small>
+                    </div>
+
+                    <div class="forecast-card">
+                        <p>Sat</p>
+                        <span>⛈️</span>
+                        <strong>26°</strong>
+                        <small>21°</small>
+                    </div>
+
+                    <div class="forecast-card">
+                        <p>Sun</p>
+                        <span>☀️</span>
+                        <strong>30°</strong>
+                        <small>23°</small>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="weather.js"></script>
+
+</body>
+</html>
